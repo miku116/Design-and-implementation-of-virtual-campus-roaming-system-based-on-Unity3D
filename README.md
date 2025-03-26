@@ -148,3 +148,9 @@
   <sub>图11  Blender 校门建模</sup>
 </p>
 
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9C%B0%E6%BA%90%E6%A5%BC.png" width="525" height="300">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE%E4%B9%A6%E9%A6%8601.png" width="525" height="300">
+  <br>
+  <sub>图片14、15</sup>
+</p>
