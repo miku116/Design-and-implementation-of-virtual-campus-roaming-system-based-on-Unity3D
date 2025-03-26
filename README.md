@@ -80,7 +80,11 @@
 应和系统的流畅运行。数据层，通过 MySQL 数据库管理所有系统数据，支持底层的数据
 存储和访问，包括用户数据、地点活动信息等，为业务逻辑层提供必要的数据支持。系
 统架构如图 1 所示。
-
+<div style="text-align: center;">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" alt="示例图1" style="max-width: 80%;">
+  <br>
+  <small>图1  系统架构图</small>
+</div>
 
 
 
