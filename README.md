@@ -95,3 +95,13 @@
 
 ![描述](https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png){: width="400" height="700"}
 <p style="text-align: center;">图1 系统架构图</p>
+
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" 
+       width="400" 
+       height="700"
+       alt="图1"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub><sup>图1 系统架构图</sup></sub>
+</p>
