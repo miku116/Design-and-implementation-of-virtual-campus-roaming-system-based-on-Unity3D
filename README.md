@@ -111,7 +111,7 @@
 场照片构建学校建筑的基本几何形状，这包括墙面、屋顶、窗户以及其他主要结构。过
 程中经过仔细观察，校园里的建筑结构据有一定的对称性和规律性，如，立柱、窗户、
 门等都是可以用 Blender 中的镜像、排列、实体化等修改器和几何节点进行复制，排列，
-翻转等操作，可以使整个建模过程更为简洁，快速。
+翻转等操作，可以使整个建模过程更为简洁，快速。  
 &emsp;&emsp;（1）教学楼建模：对教学楼进行模型的搭建，更具实际和收集来的图片，选用多边
 形建模方法。在 Blender 软件中创建多边形立方体，根据具体实际的建筑结构建出基础
 建筑角来拓展整体模型，然后对模型进行加工，进行环切、挤出和内插，教学楼的形态
@@ -135,3 +135,16 @@
   <br>
   <sub>图7  Blender 中教学楼侧面建模</sup>
 </p>
+
+&emsp;&emsp;（4）校门口建模：对南宁师范大学武鸣校区南门进行建模，为了创建拱门，使用了
+贝塞尔曲线，来弯曲立方体，实现效果，并添加校名、校徽这些细节，如图 11 所示。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E6%A0%A1%E9%97%A8%E5%8F%A3%E5%BB%BA%E6%A8%A102.png" 
+       width="525" 
+       height="300"
+       alt="图2"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图11  Blender 校门建模</sup>
+</p>
+
