@@ -154,3 +154,137 @@
   <br>
   <sub>图片14、15</sup>
 </p>
+
+<a id="5.3.1"></a>
+#### 5.3.1 界面实现
+&emsp;&emsp;（1）主菜单界面：界面背景上，为了加深用户体验，选用了南宁师范大学武鸣校区
+二期的校门景观图来作为漫游主菜单背景。风格颜色上选用了淡蓝色文本框背景和渐变
+（红黄）字体。整体风格以类科幻为主，在界面上面是漫游系统名称，左侧是本系统的
+主要功能，分别是开始漫游、漫游设置、管理员登录、帮助界面、退出漫游，如图17所
+示。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E4%B8%BB%E8%8F%9C%E5%8D%95%E7%95%8C%E9%9D%A2001.png" 
+       width="525" 
+       height="300"
+       alt="图17"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图17  主菜单界面</sup>
+</p>
+
+&emsp;&emsp;（2）漫游设置界面：此界面面内有控制背景音乐的滑动条 Slider，通过鼠标滑动
+进度条，来决定音量大小，如图 18 所示。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E4%B8%BB%E8%8F%9C%E5%8D%95%E7%95%8C%E9%9D%A202.png" 
+       width="525" 
+       height="300"
+       alt="图18"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图18  漫游设置界面</sup>
+</p>
+
+<a id="5.3.2"></a>
+#### 5.3.2 管理员登录
+&emsp;&emsp;管理员登录：跳转管理员登录界面，输入用户名和密码成功可跳转到活动信息界面，
+用户名是 NNNU，密码是 123456，连接数据库读取相关管理员 user 表内容，确认用户名
+和密码是否正确，正确则跳转活动信息发布界面，输入错误则显示用户名或密码错误，
+请重新输入的提示，如图 20 所示。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE20%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E5%BD%95.png" 
+       width="525" 
+       height="300"
+       alt="图20"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub> 图 20 管理员登录</sup>
+</p>
+
+<a id="5.3.4"></a>
+#### 5.3.4 第一人称漫游和第三人称漫游实现 
+（1）第一人称漫游的实现
+&emsp;&emsp;摄像机是虚拟场景中视角体现，也是用户使用的漫游眼睛。首先，创建一部摄像机
+放置在人物的眼睛部位前方，CameraSwitcher 类可通过调用这个摄像机来实现第一人称
+视角的效果，如图 21 所示，当然也可以同理在人物后上方设置摄像机，达成第三人称
+视角效果，但是在运用过程中，其第三人称漫游使用效果僵硬，全程能看到人物后背，
+导览效果十分差，所以选用了 Cinemachine 组件来实现第三人称的视角漫游。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0.png" 
+       width="525" 
+       height="300"
+       alt="图21"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图21  第一人称视角与可交互动态元素</sup>
+</p>
+
+<a id="5.3.4"></a>
+
+（2）第三人称漫游实现
+&emsp;&emsp;选用 CinemaChine 组件中 FreeLook Camera 来实现第三人称视角漫游，主要是因为
+Cinemachine FreeLook 提供了三个轨道（上，中，下）用于平滑地转换摄像机视角，允
+许摄像机在不同高度间自然过渡，如图 22 所示，从而提供连贯且舒适的用户体验[22]。
+FreeLook Camera 还提供了丰富的参数设置，允许开发者精细调整摄像机的行为，包括
+视角速度、旋转灵敏度、缩放限制等。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E6%91%84%E5%83%8F%E6%9C%BA01.png" 
+       width="525" 
+       height="300"
+       alt="图22"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图 22 使用 FreeLook Camera 摄像机</sup>
+</p>
+
+<a id="5.3.6"></a>
+#### 5.3.6 动态信息交互实现 
+&emsp;&emsp;信息交互包括建筑基本信息介绍、活动信息发布等，以及实现了信息界面不论人物在哪个方向都始终面向人物。
+&emsp;&emsp;在 Unity 中创建信息修改及发布界面，包括两个 InputField TextMeshPro 输入字
+段用于显示和编辑 name 和 description，以及一个按钮用于提交和更新数据库内容。使
+用 DatabaseManager 脚本来连接 MySQL 数据库，执行 SQL 更新命令，允许用户更改记录
+并将更改保存回数据库。脚本使用连接字符串来建立连接，并通过参数化的 SQL 语句保
+证数据操作的安全性。为了实现管理界面上的交互，开发一个 UIManager 脚本，它加载
+初始数据到输入字段中，并响应用户的输入和按钮点击事件，调用 DatabaseManager 脚
+本的方法更新数据库中的数据，如图 24 、25所示。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE23%20%E4%B8%8E%E5%8A%A8%E6%80%81%E5%85%83%E7%B4%A0%E4%BA%A4%E4%BA%92%E5%90%8E%E5%BC%B9%E5%87%BA%E4%BF%A1%E6%81%AF%E6%A1%86.png" 
+       width="525" 
+       height="300"
+       alt="图23"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图 23 与动态元素交互后弹出信息框</sup>
+</p>
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE24%20%E4%BF%A1%E6%81%AF%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B%E5%9B%BE.png" 
+       width="525" 
+       height="300"
+       alt="图24"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图24 信息发布流程图</sup>
+</p>
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE25%20%E4%BF%A1%E6%81%AF%E6%B4%BB%E5%8A%A8%E5%8F%91%E5%B8%83.png" 
+       width="525" 
+       height="300"
+       alt="图25"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图25 信息活动发布</sup>
+</p>
+
+<a id="5.4.8"></a>
+#### 5.4.8 校园自动寻路导航实现 
+&emsp;&emsp;寻路导航使用 Unity 的 NavMesh 系统，通过在虚拟校园漫游场景中定义可行走区域
+并配置 NavMesh Agent，使人物能够智能地避开障碍并计算最优路径以及自动寻路导航
+的关键实现涉及到创建一个动态且互动的导航系统，它能实时地引导用户穿梭于虚拟校
+园的各个角落。本系统通过与小地图相同的摄像机捕捉整个校园的地图，并实时更新用户的位置标记，利用 NavMesh 网格，本系统自动计算从用户当前位置到选定目标的最短
+路径，并让角色自动寻路到达目标位置。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE28%20%E5%B0%8F%E5%9C%B0%E5%9B%BE%E5%B1%95%E7%A4%BA.png" width="525" height="300">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE29%20%E6%A0%A1%E9%97%A8%E4%B8%8E%E6%95%99%E5%AD%A6%E6%A5%BC%E9%83%A8%E5%88%86NavMesh%E7%BD%91%E6%A0%BC%E8%B7%AF%E5%BE%84%E5%B1%95%E7%A4%BA.png" width="525" height="300">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E5%9B%BE30%E8%87%AA%E5%8A%A8%E5%AF%BC%E8%88%AA%E5%AF%BB%E8%B7%AF%E5%B1%95%E7%A4%BA.png" width="525" height="300">
+  <br>
+  <sub>图片28、29、30</sup>
+</p>
