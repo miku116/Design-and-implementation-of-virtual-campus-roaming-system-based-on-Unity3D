@@ -80,26 +80,10 @@
 应和系统的流畅运行。数据层，通过 MySQL 数据库管理所有系统数据，支持底层的数据
 存储和访问，包括用户数据、地点活动信息等，为业务逻辑层提供必要的数据支持。系
 统架构如图 1 所示。
-
-<div style="text-align: center; margin: 20px 0;">
-  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" alt="图1" style="border: 1px solid #ddd; border-radius: 4px;">
-<br>
-  <em style="color: #666;">图1 系统架构图</em>
-</div>
-<div style="text-align: center;">
-  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" alt="示例图片" style="max-width: 30;">
-  <br>
-  <small>图片1：示例图片描述</small>
-</div>
-
-
-![描述](https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png){: width="400" height="700"}
-<p style="text-align: center;">图1 系统架构图</p>
-
 <p align="center">
   <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" 
-       width="700" 
-       height="400"
+       width="350" 
+       height="200"
        alt="图1"
        style="border: 1px solid #e1e4e8; border-radius: 6px;">
   <br>
