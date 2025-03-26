@@ -87,7 +87,7 @@
   <em style="color: #666;">图1 系统架构图</em>
 </div>
 <div style="text-align: center;">
-  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" alt="示例图片" style="max-width: 80%;">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" alt="示例图片" style="max-width: 30;">
   <br>
   <small>图片1：示例图片描述</small>
 </div>
