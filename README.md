@@ -43,7 +43,7 @@
 5 虚拟校园漫游系统实现 .................................................. 15  
 5.1 软硬件平台....................................................... 15  
 5.2 场景搭建和场景优化............................................... 15  
-5.2.1 建立 3D 模型 ................................................ 15  
+[5.2.1 建立 3D 模型 ................................................ 15](#5.2.1)  
 5.2.2 添加材质纹理 ............................................... 20  
 5.2.3 模型导出 ................................................... 21   
 5.3 虚拟漫游交互实现................................................. 21  
@@ -80,6 +80,7 @@
 应和系统的流畅运行。数据层，通过 MySQL 数据库管理所有系统数据，支持底层的数据
 存储和访问，包括用户数据、地点活动信息等，为业务逻辑层提供必要的数据支持。系
 统架构如图 1 所示。
+
 <p align="center">
   <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" 
        width="525" 
@@ -101,4 +102,36 @@
        style="border: 1px solid #e1e4e8; border-radius: 6px;">
   <br>
   <sub>图2  系统整体设计图</sup>
+</p>
+
+<a id="5.2.1"></a>
+#### 5.2.1 建立3D模型
+&emsp;&emsp;虚拟校园漫游系统的实体对象包含学校教学楼建模、体育场建模、教室建模、体育
+馆建模、植被树木建模等。利用 Blender 这个强大的建模工具，根据收集的卫星图和现
+场照片构建学校建筑的基本几何形状，这包括墙面、屋顶、窗户以及其他主要结构。过
+程中经过仔细观察，校园里的建筑结构据有一定的对称性和规律性，如，立柱、窗户、
+门等都是可以用 Blender 中的镜像、排列、实体化等修改器和几何节点进行复制，排列，
+翻转等操作，可以使整个建模过程更为简洁，快速。
+&emsp;&emsp;（1）教学楼建模：对教学楼进行模型的搭建，更具实际和收集来的图片，选用多边
+形建模方法。在 Blender 软件中创建多边形立方体，根据具体实际的建筑结构建出基础
+建筑角来拓展整体模型，然后对模型进行加工，进行环切、挤出和内插，教学楼的形态
+就基本形成，再对其细加工，完善教学楼的各个不同的面。教学楼 3D 模型如图 6、7 所
+示。
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E6%AD%A62%E6%95%99%E5%AD%A6%E6%A5%BC02.png" 
+       width="525" 
+       height="300"
+       alt="图2"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图6  Blender 中教学楼正面建模</sup>
+</p>
+<p align="center">
+  <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E6%AD%A62%E6%95%99%E5%AD%A6%E6%A5%BC.png" 
+       width="525" 
+       height="300"
+       alt="图2"
+       style="border: 1px solid #e1e4e8; border-radius: 6px;">
+  <br>
+  <sub>图7  Blender 中教学楼侧面建模</sup>
 </p>
