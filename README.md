@@ -82,8 +82,8 @@
 统架构如图 1 所示。
 <p align="center">
   <img src="https://github.com/miku116/Design-and-implementation-of-virtual-campus-roaming-system-based-on-Unity3D/blob/main/IMG/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%8403.png" 
-       width="350" 
-       height="200"
+       width="525" 
+       height="300"
        alt="图1"
        style="border: 1px solid #e1e4e8; border-radius: 6px;">
   <br>
